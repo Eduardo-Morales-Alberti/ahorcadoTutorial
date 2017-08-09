@@ -39,8 +39,8 @@ Class Ahorcado{
 	}
 
 	function jugar($letra){
-		/* Si aún quedan intentos entonces:*/
-		if($this->intentos <= 8){
+		/* Si es un caracter válido*/
+		if(strlen($letra) == 1 && preg_match('/\b[a-zA-Z0-9]{1}\b/', $letra)){
 
 			/* Si el estado es 3 (ganar), 4 (perder), 5 (nuevo juego)*/
 			if($this->estado >= 3){
